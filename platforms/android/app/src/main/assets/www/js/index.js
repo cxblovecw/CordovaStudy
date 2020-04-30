@@ -1,22 +1,12 @@
 document.addEventListener('deviceReady',function(){
-   document.getElementById('network').onclick=function(){
-
-       let status={}
-       status[Connection.NONE]=["离线状态"];
-       status[Connection.WIFI]=["WIFT状态"];
-       status[Connection.CELL]=["1G状态？？"];
-       status[Connection.CELL_2G]=["2G状态"];
-       status[Connection.CELL_3G]=["3G状态"];
-       status[Connection.CELL_4G]=["4G状态"];
-       status[Connection.ETHERNET]=["连接的是以太网"];
-       status[Connection.UNKNOWN]=["未知状态"];
-       alert(navigator.connection.type);         // 当前状态
-       alert(`您当前的状态为:${status[navigator.connection.type]}`);   
+   document.getElementById('device').onclick=function(){
+       alert("获取设备运行的cordova版本:"+device.cordova)
+       alert("设备是否运行在模拟器上:"+device.isVirtual)
+       alert("获取设备制造商:"+device.manufacturer)
+       alert("获取设备型号或产品的名称:"+device.model)
+       alert("获取设备操作系统名称:"+device.platform)
+       alert("获取设备的硬件序列号:"+device.serial)
+       alert("获取设备唯一标识符:"+device.uuid)
+       alert("获取操作系统的版本:"+device.version)
    }
-   document.addEventListener('online',function(){
-       alert("在线状态");
-   })
-   document.addEventListener('offline',function(){
-       alert('离线状态');
-   })
 })

@@ -15,6 +15,7 @@
   "dependencies": {
     "cordova-android": "^8.1.0",
     "cordova-plugin-battery-status": "^2.0.3",
+    "cordova-plugin-device": "^2.0.3",
     "cordova-plugin-network-information": "^2.0.2"
   },
   "devDependencies": {
@@ -24,7 +25,8 @@
     "plugins": {
       "cordova-plugin-whitelist": {},
       "cordova-plugin-battery-status": {},
-      "cordova-plugin-network-information": {}
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-device": {}
     },
     "platforms": [
       "android"
