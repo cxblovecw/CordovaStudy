@@ -1,30 +1,22 @@
-document.addEventListener('deviceReady',function(){
-    console.log("Cordova加载完成")
-})
-document.addEventListener('pause',function(){
-    console.log('应用程序进入后台')
-})
-document.addEventListener('resume',function(){
-    console.log("应用程序从后台返回")
-})
-document.addEventListener('backbutton',function(){
-    console.log("返回按钮点击时触发")
-})
-document.addEventListener('menubutton',function(){
-    console.log("菜单按钮点击时触发")
-})
-document.addEventListener('searchbutton',function(){
-    console.log("搜索按钮点击时触发")
-})
-document.addEventListener('startcallbutton',function(){
-    console.log("按下启动呼叫按钮时触发")
-})
-document.addEventListener('endcallbutton',function(){
-    console.log("按下结束呼叫按钮时触发")
-})
-document.addEventListener('volumedownbutton',function(){
-    console.log("按下音量调低按钮时触发")
-})  
-document.addEventListener('volumeupbutton',function(){
-    console.log("按下音量提高按钮时触发")
-})  
+document.getElementById('set').onclick=function(){
+    localStorage.setItem('name','xxx');
+    localStorage.setItem('age',18);
+}
+document.getElementById('get').onclick=function(){
+    alert(localStorage.getItem('name')+localStorage.getItem('age'));
+}
+document.getElementById('remove').onclick=function(){
+    // 指定单个删除
+    localStorage.removeItem('name');
+}
+document.getElementById('getByKey').onclick=function(){
+    // key是根据字母顺序的 字母越小排越前
+    alert(localStorage.key(0))
+}
+document.getElementById('length').onclick=function(){
+    alert(localStorage.length);
+}
+document.getElementById('clear').onclick=function(){
+    // 全部删除
+    localStorage.clear();
+}

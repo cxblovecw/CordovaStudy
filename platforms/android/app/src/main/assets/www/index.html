@@ -12,10 +12,12 @@
     <body>
         <div class="app">
             <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+            <button id="set">设置storage</button>
+            <button id='get'>获取storage</button>
+            <button id='remove'>删除单个storage</button>
+            <button id='getByKey'>索引获取storage</button>
+            <button id='length'>获取长度</button>
+            <button id="clear">清空storage</button>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
