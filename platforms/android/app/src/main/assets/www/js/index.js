@@ -1,4 +1,7 @@
 document.addEventListener('deviceReady',function(){
+    // 初始化完成之后才可以识别 执行的是识别成功的回调函数
+    // 初始化完成之前不可以识别 执行的是识别失败的回调函数
+    // 也就是说 等弹出初始化完成之后点 也可以将识别的方法写在初始化成功的回调函数中
     BaiduOcr.init(
         ()=>{
             alert('初始化完成');
